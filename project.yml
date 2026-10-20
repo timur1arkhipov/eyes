@@ -1,0 +1,31 @@
+name: Eyes
+options:
+  bundleIdPrefix: com.timur
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+targets:
+  Eyes:
+    type: application
+    platform: iOS
+    sources:
+      - Eyes
+    info:
+      path: Eyes/Info.plist
+      properties:
+        CFBundleDisplayName: Eyes
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSPhotoLibraryAddUsageDescription: Нужно для сохранения готового видео в Фото.
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.timur.eyes
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
